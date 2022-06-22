@@ -37,6 +37,12 @@ body {
   height: 35px;
 }
 
+/* U can use ani on hover
+.logo:hover {
+  animation: fromRight 1s ease-in-out;
+}
+ */
+
 /* Main Title */
 .viewport-part {
   position: absolute;
@@ -48,6 +54,7 @@ body {
 .main-title {
   color: #fff;
   text-transform: uppercase;
+  backface-visibility: hidden;
 }
 
 .main-title__top {
@@ -55,6 +62,14 @@ body {
   font-size: 60px;
   font-weight: 400;
   letter-spacing: 35px;
+
+  animation-name: fromLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  /* 
+  animation-delay: 2s; 
+  animation-iteration-count: 2;
+  */
 }
 
 .main-title__bottom {
@@ -62,4 +77,41 @@ body {
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 17.4px;
+  animation: fromRight 1s ease-out;
+  animation-name: fromRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+/* Animation title */
+@keyframes fromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px) 
+  }
+
+  80% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0) 
+  }
+}
+
+@keyframes fromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  80% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }

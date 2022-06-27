@@ -1,7 +1,6 @@
 /* Row */
 .row {
-  width: 114rem;
-  background-color: #eee;
+  width: 105rem;
   margin: 0 auto;
 }
 
@@ -18,7 +17,6 @@
 /* Select class (.) with attribute */
 [class^="col-"]{
   float: left;
-  background-color: orangered;
 }
 
 
@@ -41,7 +39,7 @@
 
 /* Col 2 of 3 */
 .col-2-of-3 {
-  width: calc(2 * ((100% - 2 * 6rem) / 3) * 6rem);
+  width: calc(2 * ((100% - 2 * 6rem) / 3) + 1 * 6rem);
 }
 
 /* Col 1 of 4 */ 
